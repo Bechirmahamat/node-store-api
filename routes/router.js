@@ -1,12 +1,8 @@
 const express = require('express')
+const { getAll } = require('../controllers/controllers')
 
 const router = express.Router()
 
-router
-    .route('/')
-    .get((req, res) => {
-        res.send('Hello World')
-    })
-    .post()
+router.route('/').get(getAll).post()
 
 module.exports = router
